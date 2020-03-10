@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TopLevelObject: Decodable {
+struct Deck: Decodable {
     let cards: [Card]
 }
 
