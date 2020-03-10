@@ -11,7 +11,7 @@ import UIKit
 class CardController {
     
     static let baseURL = URL(string: "https://deckofcardsapi.com/api/deck/")
-    static let drawEndpoint = "draw/new/"
+    static let drawEndpoint = "new/draw/"
     
     static func fetchCard(completion: @escaping (Result<Card, CardError>) -> Void) {
         // 1 - Prepare URL
