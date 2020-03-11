@@ -19,6 +19,7 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
     
     func fetchImageAndUpdateViews(for card: Card) {
@@ -48,5 +49,9 @@ class CardViewController: UIViewController {
                 self?.presentErrorToUser(localizedError: error)
             }
         }
+    }
+    
+    func setupViews() {
+        cardNameLabel.layer.cornerRadius = 20
     }
 }
