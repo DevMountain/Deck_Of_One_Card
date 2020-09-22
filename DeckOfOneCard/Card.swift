@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct Card: Decodable {
+    var value: String
+    var suit: String
+    let image: URL
+}
+
+struct TopLevelObject: Decodable {
+    var cards: [Card]
+    
+}// END OF CLASS
