@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-b5-qiU">
+                                <rect key="frame" x="41.5" y="308.5" width="331" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UBI-h1-hUN">
+                                <rect key="frame" x="57" y="353" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pLI-Jv-ZhV"/>
+                                    <constraint firstAttribute="width" secondItem="UBI-h1-hUN" secondAttribute="height" multiplier="3:2" id="xEd-FJ-1CT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uog-33-SQF">
+                                <rect key="frame" x="181" y="577" width="52" height="30"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRC-S9-eHn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uog-33-SQF" firstAttribute="top" secondItem="UBI-h1-hUN" secondAttribute="bottom" constant="24" id="03n-yx-eDh"/>
+                            <constraint firstItem="UBI-h1-hUN" firstAttribute="top" secondItem="Rkc-b5-qiU" secondAttribute="bottom" constant="24" id="7SJ-2j-vfd"/>
+                            <constraint firstItem="UBI-h1-hUN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="H3A-As-t86"/>
+                            <constraint firstItem="uog-33-SQF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.125604" id="JST-kp-5Tu"/>
+                            <constraint firstItem="Rkc-b5-qiU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="T6L-Vj-H4c"/>
+                            <constraint firstItem="Rkc-b5-qiU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="hLk-KJ-EQf"/>
+                            <constraint firstItem="UBI-h1-hUN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k4f-5o-Uxu"/>
+                            <constraint firstItem="uog-33-SQF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vgo-ch-dri"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="UBI-h1-hUN" id="UDK-e0-48C"/>
+                        <outlet property="cardLabel" destination="Rkc-b5-qiU" id="FF4-Ey-mkM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
